@@ -6,7 +6,7 @@ import { actionTypes } from '../actions/types';
 export const urlCreator = (url, params = {}, options = {}) =>
   urlMapping[url](url, params, options);
 
-export default class requestManager {
+export default class searchManager {
   constructor(requestObject, options) {
     this.requestObject = requestObject;
     this.options = {

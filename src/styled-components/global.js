@@ -17,8 +17,11 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
    
   }
-
+  *, *:before, *:after {
+  box-sizing: inherit;
+}
   body {
+    box-sizing: border-box;
     min-height: 100%;
     color: ${theme('colors', 'text')};
     background-color: ${theme('colors', 'white')};
