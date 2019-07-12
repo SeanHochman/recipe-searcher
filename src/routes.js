@@ -10,7 +10,7 @@ export default () => (
     <Header />
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route name="recipe" path="/recipe" component={Recipe} />
+      <Route path="/recipe" component={Recipe} />
     </Switch>
   </React.Fragment>
 );

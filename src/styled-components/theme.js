@@ -34,7 +34,8 @@ export default {
   radius: {
     default: '0.6rem',
     small: '0.2rem',
-    toggle: '11px'
+    toggle: '11px',
+    circle: '50%'
   },
   padding: {
     default: '1rem',

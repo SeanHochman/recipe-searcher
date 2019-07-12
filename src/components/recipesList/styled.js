@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import { theme } from '../../styled-components/utils';
 
+export const CardContainer = styled.div`
+  padding: ${theme('padding', 'default')};
+  border: 1px solid ${theme('colors', 'slate')};
+  margin: ${theme('margin', 'default')};
+  border-radius: ${theme('radius', 'small')};
+`;
+
 export const CardImage = styled.div`
   margin: auto;
   max-width: 300px;
@@ -9,11 +16,4 @@ export const CardImage = styled.div`
   border-radius: ${theme('radius', 'small')};
   background-size: cover;
   background-position: 0% 25%;
-`;
-
-export const CardContainer = styled.div`
-  padding: ${theme('padding', 'default')};
-  border: 1px solid ${theme('colors', 'slate')};
-  margin: ${theme('margin', 'default')};
-  border-radius: ${theme('radius', 'small')};
 `;

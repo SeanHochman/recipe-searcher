@@ -1,7 +1,6 @@
 import React from 'react';
 import { Row, Grid } from 'react-flexbox-grid';
 
-import Header from '../header';
 import Recipes from '../recipesList';
 import SearchBar from '../searchBar';
 
