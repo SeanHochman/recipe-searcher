@@ -16,6 +16,6 @@ export const recipeDictionary = {
 };
 
 export const urlMapping = {
-  [apiList.recipeSearch]: (base, params) =>
-    `${base}${composeParams(params)}${apiKeys}`
+  [apiList.recipeSearch]: (base, params, extras) =>
+    `${base}${composeParams(params)}${apiKeys}&from=0&${composeParams(extras)}`
 };

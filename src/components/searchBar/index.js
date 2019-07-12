@@ -3,27 +3,36 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { dictionaryActions } from '../../actions/search';
 import { recipeDictionary } from '../../dictionaries/recipe';
-import { Row, Column, Grid } from 'react-flexbox-grid';
-import { SearchContainer, SearchField } from './styled';
+import { ResultsPer } from '../../constants/enum';
+
+import { SearchContainer, SearchField, HowMany, HowManyOpt } from './styled';
 
 const mapDispatchToProps = dispatch => ({
   dictionaryAction: bindActionCreators(dictionaryActions, dispatch)
 });
 
-const SearchBar = props => {
-  const { dictionaryAction } = props;
+const SearchBar = ({ dictionaryAction }) => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [resultsPer, setResultsPer] = useState(10);
 
   const handleSubmit = () => {
     dictionaryAction.get(recipeDictionary.recipeSearch, {
-      params: { searchTerms: searchTerm }
+      params: { searchTerms: searchTerm },
+      extras: { resultsPer: `to=${resultsPer}` }
     });
   };
-  const handleKeyDown = e => {
+  const handleEnter = e => {
     if (e.which === 13) {
       handleSubmit();
     }
   };
+
+  const options = ResultsPer.map((opt, i) => (
+    <HowManyOpt key={i} value={opt.value}>
+      {opt.label}
+    </HowManyOpt>
+  ));
+
   return (
     <SearchContainer>
       <SearchField
@@ -31,9 +40,14 @@ const SearchBar = props => {
         value={searchTerm}
         placeholder="search by ingredient"
         onChange={e => setSearchTerm(e.target.value)}
-        onKeyDown={handleKeyDown}
+        onKeyDown={handleEnter}
       />
-      {/* <input type="submit" value="Search" onClick={handleSubmit} /> */}
+      <HowMany
+        onChange={e => setResultsPer(e.target.value)}
+        onKeyDown={handleEnter}
+      >
+        {options}
+      </HowMany>
     </SearchContainer>
   );
 };

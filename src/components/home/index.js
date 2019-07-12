@@ -1,14 +1,13 @@
 import React from 'react';
-import { Row, Column, Grid } from 'react-flexbox-grid';
+import { Row, Grid } from 'react-flexbox-grid';
 
 import Header from '../header';
-import Recipes from '../recipes';
+import Recipes from '../recipesList';
 import SearchBar from '../searchBar';
 
 const Home = props => {
   return (
     <React.Fragment>
-      <Header />
       <Grid fluid>
         <Row center="xs">
           <SearchBar />

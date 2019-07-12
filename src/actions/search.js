@@ -5,14 +5,16 @@ import { NewSearch } from '../searchr';
 const search = new NewSearch({}).send;
 
 export const dictionaryActions = {
-  get: (data, options?, params?) => {
+  get: (data, options?, params?, extras?) => {
     return (dispatch, getState) => {
       search({
         api: data.url,
         ...data.options,
         ...options,
         ...data.params,
-        ...params
+        ...params,
+        ...data.extras,
+        ...extras
       })(dispatch, getState);
     };
   }
