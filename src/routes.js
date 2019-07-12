@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import Header from './components/header';
+
 import DefaultLayout from './layouts';
 import Home from './components/home';
 import Recipe from './components/recipe';

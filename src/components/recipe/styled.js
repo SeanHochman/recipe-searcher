@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const RecipeContainer = styled.div`
   margin: auto;
-  border: 1px solid black;
+  border: 10px solid blue !important;
   min-height: 200px;
   background: red;
 `;

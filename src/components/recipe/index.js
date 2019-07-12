@@ -11,7 +11,9 @@ const mapStateToProps = state => {
   return { recipes, currentRecipe };
 };
 
-const Recipe = ({ recipes, currentRecipe }) => {
+const Recipe = props => {
+  const { recipes, currentRecipe } = props;
+  console.log('props', props);
   if (recipes && currentRecipe) {
     const find = pathEq(['recipe', 'uri'], currentRecipe);
     const current = filter(find, recipes.hits)[0];
