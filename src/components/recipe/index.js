@@ -26,7 +26,7 @@ const Recipe = ({ recipes, currentRecipe }) => {
             <Row between="xs">
               <Col>
                 <RecipeImg>
-                  <img src={recipe.image} />
+                  <img src={recipe.image} alt={recipe.label} />
                 </RecipeImg>
               </Col>
               <Col>

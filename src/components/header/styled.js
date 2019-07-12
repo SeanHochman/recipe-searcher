@@ -10,4 +10,5 @@ export const Head = styled.header`
 `;
 export const HeadCell = styled.div`
   color: ${theme('colors', 'empty')};
+  margin-right: ${theme('margin', 'default')};
 `;

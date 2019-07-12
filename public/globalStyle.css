@@ -1,0 +1,35 @@
+html,
+body,
+#root {
+  font-display: swap;
+}
+html,
+body,
+input,
+textarea,
+button {
+  font-family: 'Roboto', Arial;
+  font-size: 15px;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+  color: '#4a4a4a';
+  background-color: '#fff';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

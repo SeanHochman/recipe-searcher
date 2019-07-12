@@ -12,7 +12,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const RecipeCard = ({ recipe, onGetUri }) => {
-  console.log({ recipe });
   const { label, calories, totalTime, uri } = recipe;
 
   const cookTime =

@@ -1,4 +1,4 @@
-export default {
+export const theme = {
   colors: {
     danger: '#e74c3c',
     default: '#111',
