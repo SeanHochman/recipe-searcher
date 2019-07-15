@@ -2,18 +2,20 @@ import styled from 'styled-components';
 import { theme } from '../../styled-components/utils';
 
 export const CardContainer = styled.div`
-  padding: ${theme('padding', 'default')};
-  border: 1px solid ${theme('colors', 'slate')};
-  margin: ${theme('margin', 'default')};
-  border-radius: ${theme('radius', 'small')};
+  min-height: 300px;
+  min-width: 300px;
+  background: white url(${props => props.image}) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 `;
 
-export const CardImage = styled.div`
-  margin: auto;
-  max-width: 300px;
-  min-height: 200px;
-  background: white url(${props => props.image}) no-repeat;
-  border-radius: ${theme('radius', 'small')};
-  background-size: cover;
-  background-position: 0% 25%;
+export const CardInfo = styled.div`
+  color: white;
+  width: 100%;
+  height: fit-content;
+  padding: ${theme('padding', 'small')};
+  background-color: rgba(0, 0, 0, 0.4);
 `;

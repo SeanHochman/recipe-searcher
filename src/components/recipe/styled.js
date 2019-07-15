@@ -8,9 +8,11 @@ export const RecipeContainer = styled.div`
 `;
 
 export const RecipeImg = styled.div`
-  max-width: 300px;
-  min-height: 200px;
-  overflow: hidden;
+  min-height: 300px;
+  min-width: 300px;
+  background: white url(${props => props.image}) no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: ${theme('radius', 'small')};
   margin-top: ${theme('margin', 'medium')};
 `;

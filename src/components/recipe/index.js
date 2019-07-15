@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Grid, Row } from 'react-flexbox-grid';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import { pathEq, filter } from 'ramda';
 
 import {
@@ -31,19 +31,21 @@ const Recipe = props => {
           <h1>{recipe.label}</h1>
           <h5>{recipe.source}</h5>
           <Row>
-            <RecipeImg>
-              <img src={recipe.image} alt={recipe.label} />
-            </RecipeImg>
-            <RecipeContent>
-              <b>Health Tags:</b>{' '}
-              {recipe.healthLabels.map(label => `${label}`).join(', ')}
-              <h3>Ingredients:</h3>
-              <Ingredients>
-                {recipe.ingredientLines.map((ing, i) => (
-                  <Ingredient key={i}>{`${i + 1}) ${ing}`}</Ingredient>
-                ))}
-              </Ingredients>
-            </RecipeContent>
+            <Col xs={4}>
+              <RecipeImg image={recipe.image} />
+            </Col>
+            <Col xs={8}>
+              <RecipeContent>
+                <b>Health Tags:</b>{' '}
+                {recipe.healthLabels.map(label => `${label}`).join(', ')}
+                <h3>Ingredients:</h3>
+                <Ingredients>
+                  {recipe.ingredientLines.map((ing, i) => (
+                    <Ingredient key={i}>{`${i + 1}) ${ing}`}</Ingredient>
+                  ))}
+                </Ingredients>
+              </RecipeContent>
+            </Col>
           </Row>
         </RecipeContainer>
       </Grid>

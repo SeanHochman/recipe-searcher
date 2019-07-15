@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 
 import { getUri } from '../../actions/filter';
 
-import { CardContainer, CardImage } from './styled';
+import { CardContainer, CardInfo } from './styled';
 
 const mapDispatchToProps = dispatch => ({
   onGetUri: bindActionCreators(getUri, dispatch)
@@ -19,11 +19,12 @@ const RecipeCard = ({ recipe, onGetUri }) => {
 
   return (
     <NavLink to="/recipe">
-      <CardContainer onClick={() => onGetUri(uri)}>
-        <CardImage image={image} />
-        <div>{label}</div>
-        <div>{calories.toFixed(2)} calories</div>
-        <div>{cookTime}</div>
+      <CardContainer image={image} onClick={() => onGetUri(uri)}>
+        <CardInfo>
+          <div>{label}</div>
+          <div>{calories.toFixed(2)} calories</div>
+          <div>{cookTime}</div>
+        </CardInfo>
       </CardContainer>
     </NavLink>
   );
