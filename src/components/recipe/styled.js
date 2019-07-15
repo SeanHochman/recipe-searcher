@@ -1,24 +1,31 @@
 import styled from 'styled-components';
-// import { theme } from '../../styled-components/utils';
+import { theme } from '../../styled-components/utils';
 
 export const RecipeContainer = styled.div`
   margin: auto;
-  border: 10px solid blue !important;
-  min-height: 200px;
-  background: red;
+  padding: ${theme('padding', 'default')};
+  border-radius: ${theme('radius', 'small')};
 `;
 
 export const RecipeImg = styled.div`
-  margin: auto;
   max-width: 300px;
   min-height: 200px;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: ${theme('radius', 'small')};
+  margin-top: ${theme('margin', 'medium')};
 `;
 
 export const RecipeContent = styled.div`
-  color: blue;
-  max-width: 400px;
-  background-color: blue;
   margin: 1rem;
+`;
+
+export const Ingredients = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 200px;
+`;
+
+export const Ingredient = styled.div`
+  max-width: 300px;
+  margin: ${theme('margin', 'xsmall')};
 `;

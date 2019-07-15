@@ -17,4 +17,13 @@ const setMiddleware = () => {
 
 const store = createStore(createRootReducer(history), compose(setMiddleware()));
 
+if (module.hot) {
+  module.hot.accept('../reducers/index', () => {
+    /* eslint-disable global-require */
+    const nextReducer = require('../reducers/index').default;
+    /* eslint-enable global-require */
+    store.replaceReducer(nextReducer(history));
+  });
+}
+
 export default store;

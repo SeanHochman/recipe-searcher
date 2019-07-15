@@ -7,7 +7,7 @@ import Recipe from './components/recipe';
 import Other from './components/other';
 
 export default () => (
-  <React.Fragment>
+  <>
     <Switch>
       <DefaultLayout>
         <Route exact path="/" component={Home} />
@@ -15,5 +15,5 @@ export default () => (
         <Route path="/other" component={Other} />
       </DefaultLayout>
     </Switch>
-  </React.Fragment>
+  </>
 );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { dictionaryActions } from '../../actions/search';
 import { Row } from 'react-flexbox-grid';
@@ -15,12 +15,12 @@ const Header = props => {
   return (
     <Head>
       <Row>
-        <Link to="/">
+        <NavLink to="/">
           <HeadCell>Recipe Searcher</HeadCell>
-        </Link>
-        <Link to="/other">
+        </NavLink>
+        <NavLink to="/other">
           <HeadCell>Other</HeadCell>
-        </Link>
+        </NavLink>
       </Row>
     </Head>
   );

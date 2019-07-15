@@ -46,7 +46,9 @@ export const theme = {
   margin: {
     default: '1rem',
     small: '0.5rem',
-    xsmall: '0.2rem'
+    xsmall: '0.2rem',
+    margin: '2rem',
+    large: '3rem'
   },
   card: {
     hover: '0 6px 20px 0 rgba(0,0,0,.3)',

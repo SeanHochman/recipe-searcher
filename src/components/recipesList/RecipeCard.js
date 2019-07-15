@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 
 import { getUri } from '../../actions/filter';
@@ -12,20 +12,20 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const RecipeCard = ({ recipe, onGetUri }) => {
-  const { label, calories, totalTime, uri } = recipe;
+  const { label, calories, totalTime, uri, image } = recipe;
 
   const cookTime =
     totalTime !== 0 ? `Cook time: ${totalTime} minutes` : `Cook time: unknown`;
 
   return (
-    <Link to="/recipe">
+    <NavLink to="/recipe">
       <CardContainer onClick={() => onGetUri(uri)}>
-        <CardImage image={recipe.image} />
+        <CardImage image={image} />
         <div>{label}</div>
         <div>{calories.toFixed(2)} calories</div>
         <div>{cookTime}</div>
       </CardContainer>
-    </Link>
+    </NavLink>
   );
 };
 

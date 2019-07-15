@@ -1935,6 +1935,15 @@ babel-plugin-macros@2.5.1:
     cosmiconfig "^5.2.0"
     resolve "^1.10.0"
 
+babel-plugin-macros@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-2.6.1.tgz#41f7ead616fc36f6a93180e89697f69f51671181"
+  integrity sha512-6W2nwiXme6j1n2erPOnmRiWfObUhWH7Qw1LMi9XZy8cj+KtESu3T6asZvtk5bMQQjX8te35o7CFueiSdL/2NmQ==
+  dependencies:
+    "@babel/runtime" "^7.4.2"
+    cosmiconfig "^5.2.0"
+    resolve "^1.10.0"
+
 babel-plugin-named-asset-import@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-named-asset-import/-/babel-plugin-named-asset-import-0.3.2.tgz#20978ed446b8e1bf4a2f42d0a94c0ece85f75f4f"
@@ -2057,6 +2066,11 @@ bcrypt-pbkdf@^1.0.0:
   integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
   dependencies:
     tweetnacl "^0.14.3"
+
+beta@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/beta/-/beta-0.0.1.tgz#954d2269ad1242fc5b29f0eed84475f62707536a"
+  integrity sha1-lU0iaa0SQvxbKfDu2ER19icHU2o=
 
 big.js@^5.2.2:
   version "5.2.2"
@@ -5161,10 +5175,10 @@ is-typedarray@~1.0.0:
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
   integrity sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
 
-is-what@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/is-what/-/is-what-3.2.3.tgz#50f76f1bd8e56967e15765d1d34302513701997b"
-  integrity sha512-c4syLgFnjXTH5qd82Fp/qtUIeM0wA69xbI0KH1QpurMIvDaZFrS8UtAa4U52Dc2qSznaMxHit0gErMp6A/Qk1w==
+is-what@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/is-what/-/is-what-3.2.4.tgz#da528659017bdd4b07892dfe4fd60da6ac500e98"
+  integrity sha512-0awkPsfVd85bYStP99EqLxKvhc5SiE70hSZCPxJN2SYZ5d+IkX+r1Ri0qnPWPnuRVFrqrEnI3JgFN3yrGtjXaw==
 
 is-windows@^1.0.2:
   version "1.0.2"
@@ -6116,11 +6130,11 @@ memory-fs@^0.4.0, memory-fs@^0.4.1, memory-fs@~0.4.1:
     readable-stream "^2.0.1"
 
 merge-anything@^2.2.4:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/merge-anything/-/merge-anything-2.2.5.tgz#37ef13f36359ee64f09c657d2cef45f7e29493f9"
-  integrity sha512-WgZGR7EQ1D8pyh57uKBbkPhUCJZLGdMzbDaxL4MDTJSGsvtpGdm8myr6DDtgJwT46xiFBlHqxbveDRpFBWlKWQ==
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/merge-anything/-/merge-anything-2.4.0.tgz#86959caf02bb8969d1ae5e1b652862bc5fe54e44"
+  integrity sha512-MhJcPOEcDUIbwU0LnEfx5S9s9dfQ/KPu4g2UA5T5G1LRKS0XmpDvJ9+UUfTkfhge+nA1gStE4tJAvx6lXLs+rg==
   dependencies:
-    is-what "^3.2.3"
+    is-what "^3.2.4"
 
 merge-deep@^3.0.2:
   version "3.0.2"
