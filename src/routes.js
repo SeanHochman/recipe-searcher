@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
+import { Row, Grid } from 'react-flexbox-grid';
 
 import DefaultLayout from './layouts';
 import Home from './components/home';
@@ -10,9 +11,11 @@ export default () => (
   <>
     <Switch>
       <DefaultLayout>
-        <Route exact path="/" component={Home} />
-        <Route path="/recipe" component={Recipe} />
-        <Route path="/other" component={Other} />
+        <Grid fluid>
+          <Route exact path="/" component={Home} />
+          <Route path="/recipe" component={Recipe} />
+          <Route path="/other" component={Other} />
+        </Grid>
       </DefaultLayout>
     </Switch>
   </>

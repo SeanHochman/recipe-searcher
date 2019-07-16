@@ -2,9 +2,13 @@ import styled from 'styled-components';
 import { theme } from '../../styled-components/utils';
 
 export const RecipeContainer = styled.div`
-  margin: auto;
-  padding: ${theme('padding', 'default')};
-  border-radius: ${theme('radius', 'small')};
+  margin: 0;
+  padding: ${theme('padding', 'small')} 0;
+  border-bottom: 1px solid ${theme('colors', 'slate')};
+`;
+
+export const RecipeTitle = styled.h1`
+  color: ${theme('colors', 'primary')};
 `;
 
 export const RecipeImg = styled.div`
@@ -13,7 +17,6 @@ export const RecipeImg = styled.div`
   background: white url(${props => props.image}) no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: ${theme('radius', 'small')};
   margin-top: ${theme('margin', 'medium')};
 `;
 

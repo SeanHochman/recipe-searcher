@@ -25,6 +25,9 @@ export const theme = {
     small: '0.8rem',
     xsmall: '0.7rem'
   },
+  fonts: {
+    pacifico: `'Pacifico', cursive`
+  },
   lineHeight: {
     default: '1.1rem',
     huge: '1.5rem',

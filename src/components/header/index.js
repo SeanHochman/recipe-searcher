@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { dictionaryActions } from '../../actions/search';
 import { Row } from 'react-flexbox-grid';
 
-import { Head, HeadCell } from './styled';
+import { Head, HeadCell, TagLine } from './styled';
 
 const mapDispatchToProps = dispatch => ({
   dictionaryAction: bindActionCreators(dictionaryActions, dispatch)
@@ -22,6 +22,7 @@ const Header = props => {
           <HeadCell>Other</HeadCell>
         </NavLink>
       </Row>
+      <TagLine>Whats for dinner, bitch?</TagLine>
     </Head>
   );
 };

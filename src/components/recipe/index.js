@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 import { pathEq, filter } from 'ramda';
 
 import {
+  RecipeTitle,
   RecipeContainer,
   RecipeImg,
   RecipeContent,
@@ -26,29 +27,27 @@ const Recipe = props => {
     const { recipe } = current;
     console.log({ recipe });
     return (
-      <Grid fluid>
-        <RecipeContainer>
-          <h1>{recipe.label}</h1>
-          <h5>{recipe.source}</h5>
-          <Row>
-            <Col xs={4}>
-              <RecipeImg image={recipe.image} />
-            </Col>
-            <Col xs={8}>
-              <RecipeContent>
-                <b>Health Tags:</b>{' '}
-                {recipe.healthLabels.map(label => `${label}`).join(', ')}
-                <h3>Ingredients:</h3>
-                <Ingredients>
-                  {recipe.ingredientLines.map((ing, i) => (
-                    <Ingredient key={i}>{`${i + 1}) ${ing}`}</Ingredient>
-                  ))}
-                </Ingredients>
-              </RecipeContent>
-            </Col>
-          </Row>
-        </RecipeContainer>
-      </Grid>
+      <RecipeContainer>
+        <RecipeTitle>{recipe.label}</RecipeTitle>
+        <h5>{recipe.source}</h5>
+        <Row>
+          <Col xs={4}>
+            <RecipeImg image={recipe.image} />
+          </Col>
+          <Col xs={8}>
+            <RecipeContent>
+              <b>Health Tags:</b>{' '}
+              {recipe.healthLabels.map(label => `${label}`).join(', ')}
+              <h3>Ingredients:</h3>
+              <Ingredients>
+                {recipe.ingredientLines.map((ing, i) => (
+                  <Ingredient key={i}>{`${i + 1}) ${ing}`}</Ingredient>
+                ))}
+              </Ingredients>
+            </RecipeContent>
+          </Col>
+        </Row>
+      </RecipeContainer>
     );
   } else {
     return <div>Loading...</div>;
