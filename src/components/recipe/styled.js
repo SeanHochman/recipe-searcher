@@ -4,11 +4,12 @@ import { theme } from '../../styled-components/utils';
 export const RecipeContainer = styled.div`
   margin: 0;
   padding: ${theme('padding', 'small')} 0;
-  border-bottom: 1px solid ${theme('colors', 'slate')};
+  border-bottom: 1px solid ${theme('colors', 'tan')};
 `;
 
 export const RecipeTitle = styled.h1`
-  color: ${theme('colors', 'primary')};
+  color: ${theme('colors', 'tan')};
+  font-family: ${theme('fonts', 'pacifico')};
 `;
 
 export const RecipeImg = styled.div`

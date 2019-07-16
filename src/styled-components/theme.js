@@ -12,6 +12,7 @@ export const theme = {
     warning: '#ffae19',
     white: '#fff',
     black: '#262426',
+    tan: '#660000',
     chocolate: '#ED5632',
     medGreen: '#3CC576',
     slate: '#646B82'

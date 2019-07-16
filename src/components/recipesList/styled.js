@@ -1,6 +1,11 @@
 import styled, { css } from 'styled-components';
 import { theme } from '../../styled-components/utils';
 
+export const Title = styled.h1`
+  font-family: ${theme('fonts', 'pacifico')};
+  color: ${theme('colors', 'tan')};
+`;
+
 export const Carousel = styled.div`
   min-height: 300px;
   position: relative;
@@ -29,7 +34,7 @@ export const CardContainer = styled.div`
   ${({ cur }) =>
     !cur &&
     css`
-      box-shadow: inset 0px 0px 1000px 200px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 0px 0px 1000px 200px rgba(0, 0, 0, 0.3);
     `}
   transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   min-height: 300px;
@@ -82,7 +87,7 @@ export const MoveButton = styled.button`
   cursor: pointer;
   position: absolute;
   ${({ side }) => whichSide(side)}
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   top: calc(50% - 25px);
   color: white;
   opacity: 0;

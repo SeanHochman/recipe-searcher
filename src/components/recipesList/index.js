@@ -3,17 +3,21 @@ import { connect } from 'react-redux';
 import { Row, Col } from 'react-flexbox-grid';
 import List from './List';
 
+import { Title } from './styled';
+
 const mapStateToProps = state => {
   const { recipes } = state.searchr;
   return { recipes };
 };
 
 const Recipes = ({ recipes }) => {
-  const titleTags = recipes && `containing ${recipes.q.toUpperCase()}`;
+  const titleTags = recipes && (
+    <Title>{`Recipes containing ${recipes.q.toUpperCase()}`}</Title>
+  );
 
   return (
     <Col>
-      <h1>Recipes {titleTags}</h1>
+      {titleTags}
       <Row>{recipes && <List recipes={recipes.hits} />}</Row>
     </Col>
   );

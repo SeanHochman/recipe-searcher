@@ -4,7 +4,7 @@ import { theme } from '../../styled-components/utils';
 export const SearchContainer = styled.div`
   width: 100vw;
   padding: ${theme('padding', 'default')};
-  border-bottom: 1px solid ${theme('colors', 'slate')};
+  border-bottom: 1px solid ${theme('colors', 'tan')};
   display: flex;
 `;
 
