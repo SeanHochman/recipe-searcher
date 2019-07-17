@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Col, Row } from 'react-flexbox-grid';
+import React, { useState, useEffect } from 'react';
 
 import { Carousel, SlideWrapper, MoveButton } from './styled';
 

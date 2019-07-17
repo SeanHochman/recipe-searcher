@@ -19,5 +19,7 @@ export const HowMany = styled.select`
   background-color: white;
 `;
 export const HowManyOpt = styled.option`
-  text-align: right'
+  text-align: right;
 `;
+
+export const Advanced = styled.div``;

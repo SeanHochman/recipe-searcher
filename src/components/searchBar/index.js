@@ -4,8 +4,15 @@ import { bindActionCreators } from 'redux';
 import { dictionaryActions } from '../../actions/search';
 import { recipeDictionary } from '../../dictionaries/recipe';
 import { ResultsPer } from '../../constants/enum';
-
-import { SearchContainer, SearchField, HowMany, HowManyOpt } from './styled';
+import { Row } from 'react-flexbox-grid';
+import Recipes from '../recipesList';
+import {
+  SearchContainer,
+  SearchField,
+  HowMany,
+  HowManyOpt,
+  Advanced
+} from './styled';
 
 const mapDispatchToProps = dispatch => ({
   dictionaryAction: bindActionCreators(dictionaryActions, dispatch)
@@ -34,21 +41,28 @@ const SearchBar = ({ dictionaryAction }) => {
   ));
 
   return (
-    <SearchContainer>
-      <SearchField
-        type="input"
-        value={searchTerm}
-        placeholder="search by ingredient"
-        onChange={e => setSearchTerm(e.target.value)}
-        onKeyDown={handleEnter}
-      />
-      <HowMany
-        onChange={e => setResultsPer(e.target.value)}
-        onKeyDown={handleEnter}
-      >
-        {options}
-      </HowMany>
-    </SearchContainer>
+    <Row>
+      <SearchContainer>
+        <SearchField
+          type="input"
+          value={searchTerm}
+          placeholder="search by ingredient"
+          onChange={e => setSearchTerm(e.target.value)}
+          onKeyDown={handleEnter}
+        />
+        <HowMany
+          onChange={e => setResultsPer(e.target.value)}
+          onKeyDown={handleEnter}
+        >
+          {options}
+        </HowMany>
+      </SearchContainer>
+      <Advanced>
+        <input type="text" placeholder="calories" />
+      </Advanced>
+
+      <Recipes />
+    </Row>
   );
 };
 

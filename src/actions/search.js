@@ -1,4 +1,5 @@
 import { NewSearch } from '../searchr';
+import { actionTypes } from './types';
 
 // import * as flow from '../flow/actions';
 
@@ -19,3 +20,7 @@ export const dictionaryActions = {
     };
   }
 };
+
+export const clearResults = () => ({
+  type: actionTypes.CLEAR_RESULTS
+});

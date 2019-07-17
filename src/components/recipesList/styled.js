@@ -1,27 +1,31 @@
 import styled, { css } from 'styled-components';
 import { theme } from '../../styled-components/utils';
 
-export const Title = styled.h1`
-  font-family: ${theme('fonts', 'pacifico')};
+export const Wrapper = styled.div`
+  width: 100vw;
+`;
+
+export const Title = styled.div`
   color: ${theme('colors', 'tan')};
+  margin: ${theme('margin', 'default')};
+  font-size: ${theme('fontSize', 'mega')};
+  text-align: left;
 `;
 
 export const Carousel = styled.div`
   min-height: 300px;
   position: relative;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 `;
 
-const pos = (index, length) => {
-  return index * (100 / length);
-};
+const pos = (index, length) => index * (100 / length);
 
 export const SlideWrapper = styled.div`
   display: flex;
   flex-direction: row;
   position: absolute;
-  min-width: 100vw;
+  width: ${({ length }) => length * 100};
   transform: ${({ index, length }) =>
     index < length - 1
       ? css`translateX(-${({ index, length }) => pos(index, length)}%);`
@@ -38,7 +42,7 @@ export const CardContainer = styled.div`
     `}
   transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   min-height: 300px;
-  min-width: 33vw;
+  min-width: 33.33333vw;
   background: white url(${props => props.image}) no-repeat;
   background-size: cover;
   background-position: center;
@@ -74,10 +78,10 @@ export const CardInfo = styled.div`
 const whichSide = side => {
   const which = {
     left: css`
-      left: 0;
+      left: ${theme('margin', 'small')};
     `,
     right: css`
-      right: 0;
+      right: ${theme('margin', 'small')};
     `
   };
   return which[side];
@@ -95,6 +99,7 @@ export const MoveButton = styled.button`
   width: 50px;
   outline: none;
   border: none;
+  border-radius: ${theme('radius', 'circle')};
   transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
   :before {

@@ -21,6 +21,7 @@ export const theme = {
     checkbox: '1rem',
     default: '1rem',
     huge: '1.5rem',
+    mega: '2.5rem',
     large: '1.3rem',
     sameToSelect: '1rem',
     small: '0.8rem',

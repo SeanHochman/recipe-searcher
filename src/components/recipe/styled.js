@@ -1,15 +1,11 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { theme } from '../../styled-components/utils';
 
-export const RecipeContainer = styled.div`
-  margin: 0;
-  padding: ${theme('padding', 'small')} 0;
-  border-bottom: 1px solid ${theme('colors', 'tan')};
-`;
+export const RecipeContainer = styled.div``;
 
 export const RecipeTitle = styled.h1`
   color: ${theme('colors', 'tan')};
-  font-family: ${theme('fonts', 'pacifico')};
 `;
 
 export const RecipeImg = styled.div`
@@ -34,4 +30,8 @@ export const Ingredients = styled.div`
 export const Ingredient = styled.div`
   max-width: 300px;
   margin: ${theme('margin', 'xsmall')};
+`;
+
+export const Back = styled(Link)`
+  padding: ${theme('padding', 'small')};
 `;

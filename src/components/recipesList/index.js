@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Row, Col } from 'react-flexbox-grid';
 import List from './List';
 
-import { Title } from './styled';
+import { Title, Wrapper } from './styled';
 
 const mapStateToProps = state => {
   const { recipes } = state.searchr;
@@ -16,10 +15,10 @@ const Recipes = ({ recipes }) => {
   );
 
   return (
-    <Col>
+    <Wrapper>
       {titleTags}
-      <Row>{recipes && <List recipes={recipes.hits} />}</Row>
-    </Col>
+      {recipes && <List recipes={recipes.hits} />}
+    </Wrapper>
   );
 };
 

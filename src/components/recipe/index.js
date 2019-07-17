@@ -9,7 +9,8 @@ import {
   RecipeImg,
   RecipeContent,
   Ingredient,
-  Ingredients
+  Ingredients,
+  Back
 } from './styled';
 
 const mapStateToProps = state => {
@@ -27,27 +28,31 @@ const Recipe = props => {
     const { recipe } = current;
     console.log({ recipe });
     return (
-      <RecipeContainer>
-        <RecipeTitle>{recipe.label}</RecipeTitle>
-        <h5>{recipe.source}</h5>
-        <Row>
-          <Col xs={4}>
-            <RecipeImg image={recipe.image} />
-          </Col>
-          <Col xs={8}>
-            <RecipeContent>
-              <b>Health Tags:</b>{' '}
-              {recipe.healthLabels.map(label => `${label}`).join(', ')}
-              <h3>Ingredients:</h3>
-              <Ingredients>
-                {recipe.ingredientLines.map((ing, i) => (
-                  <Ingredient key={i}>{`${i + 1}) ${ing}`}</Ingredient>
-                ))}
-              </Ingredients>
-            </RecipeContent>
-          </Col>
-        </Row>
-      </RecipeContainer>
+      <>
+        <RecipeContainer>
+          <RecipeTitle>{recipe.label}</RecipeTitle>
+          <h5>{recipe.source}</h5>
+
+          <Row>
+            <Col xs={4}>
+              <RecipeImg image={recipe.image} />
+            </Col>
+            <Col xs={8}>
+              <RecipeContent>
+                <b>Health Tags:</b>{' '}
+                {recipe.healthLabels.map(label => `${label}`).join(', ')}
+                <h3>Ingredients:</h3>
+                <Ingredients>
+                  {recipe.ingredientLines.map((ing, i) => (
+                    <Ingredient key={i}>{`${i + 1}) ${ing}`}</Ingredient>
+                  ))}
+                </Ingredients>
+              </RecipeContent>
+            </Col>
+          </Row>
+        </RecipeContainer>
+        <Back to="/search">Back</Back>
+      </>
     );
   } else {
     return <div>Loading...</div>;
