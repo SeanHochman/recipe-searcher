@@ -8,7 +8,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "beta": "^0.0.1",
     "connected-react-router": "^6.5.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "polished": "^3.4.1",
     "ramda": "^0.26.1",
     "react": "^16.8.6",
